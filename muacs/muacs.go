@@ -20,5 +20,6 @@ func main() {
 		Addr:    listenAddress,
 		Handler: &h2c.Server{Handler: m, DisableDirect: false},
 	}
+	log.Println("Launching Server")
 	log.Fatal(s.ListenAndServe())
 }
